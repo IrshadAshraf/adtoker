@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { HashLink } from "react-router-hash-link";
+import logo from "@/assets/Nav/image 11.png";
 import {
   AnimatePresence,
   motion,
@@ -121,13 +122,13 @@ function Nav() {
       >
         <nav className="mx-auto flex max-w-[1600px] items-center justify-between px-5 py-4 sm:px-10">
           {/* Logo */}
-          <a
-            href="#hero"
+          <HashLink
+            smooth
+            to="#hero"
             className="flex items-center gap-1 rounded-xl bg-white px-3 py-1.5 text-lg font-bold tracking-tight shadow-sm ring-1 ring-black/5"
           >
-            <span className="text-[#EF1751]">AD</span>
-            <span className="text-[#16213E]">TOKER</span>
-          </a>
+            <img src={logo} alt="none" className="h-12" />
+          </HashLink>
 
           {/* Desktop links */}
           <ul

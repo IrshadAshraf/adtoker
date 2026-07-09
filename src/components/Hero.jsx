@@ -535,11 +535,11 @@ function Hero() {
                     },
                   },
                 }}
-                className="absolute border-30 border-orange-50 bg-white rounded-full -left-20"
+                className="absolute border-20 border-orange-50 bg-white rounded-full -left-10 -bottom-12"
               >
                 {" "}
-                <div className=" bg-orange-700 rounded-full p-8">
-                  <div className=" bg-white  rounded-xl p-4">
+                <div className=" bg-orange-700 rounded-full p-5">
+                  <div className=" bg-white  rounded-xl p-1">
                     <div className="bg-orange-700 relative grid h-14 w-14 place-items-center rounded-full border-4 border-white shadow-lg text-white">
                       <TrendingUp />
                     </div>

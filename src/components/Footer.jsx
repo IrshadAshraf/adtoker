@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
+import logo from "@/assets/Nav/image 11.png";
 import {
   FiSend,
   FiTwitter,
@@ -13,6 +14,7 @@ import { RiVkLine } from "react-icons/ri";
 // Assets
 import codesinc from "@/assets/footer/codesinc.png";
 import Drawer from "./Drawer";
+import { HashLink } from "react-router-hash-link";
 
 /* ------------------------------------------------------------------ */
 /*  Physics Helper (Matching Hero & Blogs)                            */
@@ -93,9 +95,9 @@ function Footer() {
               whileInView={{ opacity: 1 }}
               className="bg-white px-4 py-2 rounded-lg inline-block mb-8"
             >
-              <h1 className="text-xl font-bold tracking-tighter">
-                <span className="text-[#EF1751]">AD</span> TOKER
-              </h1>
+              <HashLink smooth to="#hero">
+                <img src={logo} alt="none" className="h-10" />
+              </HashLink>
             </motion.div>
 
             <p className="text-white text-lg sm:text-2xl font-semibold leading-tight max-w-sm mb-10">
