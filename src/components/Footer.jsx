@@ -93,7 +93,7 @@ function Footer() {
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="bg-white px-4 py-2 rounded-lg inline-block mb-8"
+              className="inline-block mb-8"
             >
               <HashLink smooth to="#hero">
                 <img src={logo} alt="none" className="h-10" />

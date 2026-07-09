@@ -509,7 +509,7 @@ function Hero() {
               ))}
               <motion.div
                 initial={{ opacity: 0, scale: 0.4 }}
-                animate={{ opacity: 1, scale: 1, rotate: 45 }}
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{
                   opacity: { delay: 0.9, duration: 0.5 },
                   scale: {
@@ -518,31 +518,16 @@ function Hero() {
                     stiffness: 260,
                     damping: 14,
                   },
-                  rotate: {
-                    duration: 14,
-                    repeat: Infinity,
-                    ease: "linear",
-                  },
                 }}
                 whileHover={{
-                  scale: 1.15,
-                  rotate: 45,
-                  transition: {
-                    rotate: {
-                      duration: 1.6,
-                      repeat: Infinity,
-                      ease: "linear",
-                    },
-                  },
+                  scale: 1.1,
+                  transition: { duration: 0.3 }
                 }}
-                className="absolute border-20 border-orange-50 bg-white rounded-full -left-10 -bottom-12"
+                className="absolute -left-12 -bottom-12 z-20 flex h-28 w-28 items-center justify-center rounded-full bg-white shadow-xl ring-8 ring-[#EF1751]/10"
               >
-                {" "}
-                <div className=" bg-orange-700 rounded-full p-5">
-                  <div className=" bg-white  rounded-xl p-1">
-                    <div className="bg-orange-700 relative grid h-14 w-14 place-items-center rounded-full border-4 border-white shadow-lg text-white">
-                      <TrendingUp />
-                    </div>
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#EF1751]">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-[14px] bg-white shadow-sm">
+                    <FiTrendingUp className="text-[#EF1751] text-2xl" />
                   </div>
                 </div>
               </motion.div>

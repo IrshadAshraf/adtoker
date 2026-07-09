@@ -125,7 +125,7 @@ function Nav() {
           <HashLink
             smooth
             to="#hero"
-            className="flex items-center gap-1 rounded-xl bg-white px-3 py-1.5 text-lg font-bold tracking-tight shadow-sm ring-1 ring-black/5"
+            className="flex items-center gap-1 text-lg font-bold tracking-tight"
           >
             <img src={logo} alt="none" className="h-12" />
           </HashLink>
