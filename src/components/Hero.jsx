@@ -360,32 +360,72 @@ function Hero() {
 
         {/* Right column - image / stats composition */}
         <div className="relative mx-auto w-full max-w-sm sm:max-w-md">
-          <div className="grid gap-4">
-            {/* Stat card */}
-            <motion.div
-              initial={{ opacity: 0, x: -40, rotate: -3 }}
-              animate={{ opacity: 1, x: 0, rotate: 0 }}
-              transition={{
-                delay: 0.4,
-                duration: 0.8,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              whileHover={{ y: -6, rotate: -1 }}
-              className="relative flex flex-col rounded-3xl bg-[#EF1751] p-5 text-white shadow-[0_20px_45px_-15px_rgba(239,23,81,0.55)]"
-            >
-              <AvatarStack avatars={[avatar1, avatar2, avatar3]} />
+          <div className="grid grid-cols-2 gap-4 items-stretch">
+            {/* Left side: Stat card + Growth card */}
+            <div className="flex flex-col justify-between h-full gap-4">
+              {/* Stat card */}
+              <motion.div
+                initial={{ opacity: 0, x: -40, rotate: -3 }}
+                animate={{ opacity: 1, x: 0, rotate: 0 }}
+                transition={{
+                  delay: 0.4,
+                  duration: 0.8,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                whileHover={{ y: -6, rotate: -1 }}
+                className="relative flex flex-col justify-center rounded-3xl bg-[#EF1751] p-4 text-white shadow-[0_20px_45px_-15px_rgba(239,23,81,0.55)] flex-1"
+              >
+                <AvatarStack avatars={[avatar1, avatar2, avatar3]} />
 
-              <div className="mt-6">
-                <p className="text-3xl font-bold leading-none">
-                  <Counter to={245} suffix="k +" />
-                </p>
-                <p className="mt-2 text-xs font-medium text-white/80">
-                  More Then 2000 Peoples Joins Us
-                </p>
-              </div>
-            </motion.div>
+                <div className="mt-4">
+                  <p className="text-3xl font-bold leading-none">
+                    <Counter to={245} suffix="k +" />
+                  </p>
+                  <p className="mt-2 text-xs font-medium text-white/80">
+                    More Then 2000 Peoples Joins Us
+                  </p>
+                </div>
+              </motion.div>
 
-            {/* Top-right image */}
+              {/* Growth badge floating card */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.75,
+                  duration: 0.7,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                whileHover={{ y: -6 }}
+                className="relative flex items-center gap-3 rounded-3xl bg-[#EF1751] p-4 text-white shadow-[0_20px_45px_-15px_rgba(239,23,81,0.55)]"
+              >
+                <div className="flex items-end gap-1">
+                  {[10, 18, 26, 34].map((h, i) => (
+                    <motion.span
+                      key={h}
+                      className="w-1.5 rounded-full bg-white/90"
+                      initial={{ height: 0 }}
+                      animate={{ height: h }}
+                      transition={{
+                        delay: 1 + i * 0.1,
+                        duration: 0.5,
+                        ease: "easeOut",
+                      }}
+                    />
+                  ))}
+                </div>
+                <div>
+                  <p className="text-lg font-bold leading-none">
+                    <Counter to={324} prefix="+" suffix="%" />
+                  </p>
+                  <p className="mt-1 text-[11px] font-medium text-white/80">
+                    Revenue Growth
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Right side: Top-right image */}
             <TiltCard
               maxTilt={12}
               initial={{ opacity: 0, x: 40, rotate: 3 }}
@@ -396,7 +436,7 @@ function Hero() {
                 ease: [0.16, 1, 0.3, 1],
               }}
               whileHover={{ y: -6 }}
-              className="relative overflow-hidden rounded-3xl shadow-[0_20px_45px_-15px_rgba(23,23,31,0.25)]"
+              className="relative overflow-hidden rounded-3xl shadow-[0_20px_45px_-15px_rgba(23,23,31,0.25)] h-full min-h-[220px]"
             >
               <motion.img
                 src={image1}
@@ -431,43 +471,6 @@ function Hero() {
               </motion.div>
             </TiltCard>
 
-            {/* Growth badge floating card */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.75,
-                duration: 0.7,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              whileHover={{ y: -6 }}
-              className="relative flex items-center gap-3 rounded-3xl bg-[#EF1751] p-5 text-white shadow-[0_20px_45px_-15px_rgba(239,23,81,0.55)]"
-            >
-              <div className="flex items-end gap-1">
-                {[10, 18, 26, 34].map((h, i) => (
-                  <motion.span
-                    key={h}
-                    className="w-1.5 rounded-full bg-white/90"
-                    initial={{ height: 0 }}
-                    animate={{ height: h }}
-                    transition={{
-                      delay: 1 + i * 0.1,
-                      duration: 0.5,
-                      ease: "easeOut",
-                    }}
-                  />
-                ))}
-              </div>
-              <div>
-                <p className="text-lg font-bold leading-none">
-                  <Counter to={324} prefix="+" suffix="%" />
-                </p>
-                <p className="mt-1 text-[11px] font-medium text-white/80">
-                  Revenue Growth
-                </p>
-              </div>
-            </motion.div>
-
             {/* Bottom image spanning both columns */}
             <TiltCard
               maxTilt={8}
@@ -492,7 +495,7 @@ function Hero() {
           </div>
 
           {/* Connector icon with radar pulse - signature element */}
-          <div className="absolute left-0 top-[38%] -translate-x-1/2 -translate-y-1/2 z-10">
+          <div className="absolute left-0 top-[30%] -translate-x-1/2 -translate-y-1/2 z-10">
             <div className="relative grid h-16 w-16 place-items-center">
               {[0, 1].map((i) => (
                 <motion.span

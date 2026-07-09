@@ -96,7 +96,7 @@ function Footer() {
               className="inline-block mb-8"
             >
               <HashLink smooth to="#hero">
-                <img src={logo} alt="none" className="h-10" />
+                <img src={logo} alt="none" className="h-10 mix-blend-multiply" />
               </HashLink>
             </motion.div>
 

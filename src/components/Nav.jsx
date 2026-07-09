@@ -127,7 +127,7 @@ function Nav() {
             to="#hero"
             className="flex items-center gap-1 text-lg font-bold tracking-tight"
           >
-            <img src={logo} alt="none" className="h-12" />
+            <img src={logo} alt="none" className="h-12 mix-blend-multiply" />
           </HashLink>
 
           {/* Desktop links */}
