@@ -201,7 +201,7 @@ function AvatarStack({ avatars }) {
             damping: 20,
             delay: hovered ? 0 : 0.7 + i * 0.1,
           }}
-          className="h-9 w-9 rounded-full border-2 border-[#F0453D] object-cover shadow-sm"
+          className="h-9 w-9 rounded-full border-2 border-[#EF1751] object-cover shadow-sm"
         />
       ))}
     </div>
@@ -213,7 +213,7 @@ function Hero() {
   const [bookCallOpen, setBookCallOpen] = useState(false);
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-[#FDEFEF] via-[#FDF4F4] to-white pb-20 pt-36 sm:pt-40">
+    <div className="relative overflow-hidden bg-gradient-to-b from-[#FCE8EF] via-[#FBE8EF] to-white pb-20 pt-36 sm:pt-40">
       {/* Decorative floating gradient blobs */}
       <motion.img
         src={topLeftGradient}
@@ -239,7 +239,7 @@ function Hero() {
             variants={lineContainer}
             initial="hidden"
             animate="visible"
-            className="text-[2.75rem] font-extrabold leading-[1.08] tracking-tight text-[#111118] sm:text-6xl"
+            className="text-[2rem] font-bold leading-[1.1] tracking-tight text-[#111118] sm:text-5xl lg:text-6xl"
           >
             {HEADLINE_LINES.map((words) => (
               <motion.span
@@ -278,16 +278,16 @@ function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.78, duration: 0.7 }}
-            className="mt-8 flex flex-wrap items-center gap-4"
+            className="mt-8 flex flex-wrap items-center gap-3"
           >
             <MagneticButton
               onClick={() => setGetStartedOpen(true)}
               whileHover={{
                 scale: 1.07,
-                boxShadow: "0 18px 40px -10px rgba(240,69,61,0.65)",
+                boxShadow: "0 18px 40px -10px rgba(239,23,81,0.65)",
               }}
               whileTap={{ scale: 0.94 }}
-              className="group relative flex items-center gap-2 overflow-hidden rounded-full bg-[#F0453D] px-6 py-3.5 text-sm font-semibold text-white"
+              className="group relative flex items-center gap-2 overflow-hidden rounded-full bg-[#EF1751] px-5 py-3 text-sm font-semibold text-white"
             >
               <motion.span
                 aria-hidden="true"
@@ -314,12 +314,12 @@ function Hero() {
               onClick={() => setBookCallOpen(true)}
               whileHover={{
                 scale: 1.07,
-                borderColor: "#F0453D",
-                color: "#F0453D",
+                borderColor: "#EF1751",
+                color: "#EF1751",
                 y: -3,
               }}
               whileTap={{ scale: 0.94 }}
-              className="flex items-center gap-2 rounded-full border border-black/10 px-6 py-3.5 text-sm font-semibold text-[#17171F] transition-colors"
+              className="flex items-center gap-2 rounded-full border border-black/10 px-5 py-3 text-sm font-semibold text-[#17171F] transition-colors"
             >
               <motion.span
                 className="inline-flex"
@@ -346,7 +346,7 @@ function Hero() {
               >
                 <motion.span
                   whileHover={{ rotate: 12, scale: 1.15 }}
-                  className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#F0453D] text-white"
+                  className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#EF1751] text-white"
                 >
                   <FiCheck size={13} />
                 </motion.span>
@@ -359,7 +359,7 @@ function Hero() {
         </div>
 
         {/* Right column - image / stats composition */}
-        <div className="relative mx-auto w-full max-w-md">
+        <div className="relative mx-auto w-full max-w-sm sm:max-w-md">
           <div className="grid gap-4">
             {/* Stat card */}
             <motion.div
@@ -371,12 +371,12 @@ function Hero() {
                 ease: [0.16, 1, 0.3, 1],
               }}
               whileHover={{ y: -6, rotate: -1 }}
-              className="relative flex flex-col rounded-3xl bg-[#F0453D] p-5 text-white shadow-[0_20px_45px_-15px_rgba(240,69,61,0.55)]"
+              className="relative flex flex-col rounded-3xl bg-[#EF1751] p-5 text-white shadow-[0_20px_45px_-15px_rgba(239,23,81,0.55)]"
             >
               <AvatarStack avatars={[avatar1, avatar2, avatar3]} />
 
               <div className="mt-6">
-                <p className="text-3xl font-extrabold leading-none">
+                <p className="text-3xl font-bold leading-none">
                   <Counter to={245} suffix="k +" />
                 </p>
                 <p className="mt-2 text-xs font-medium text-white/80">
@@ -421,7 +421,7 @@ function Hero() {
                   <FiTrendingUp size={13} />
                 </span>
                 <span className="leading-tight">
-                  <span className="block text-sm font-extrabold">
+                  <span className="block text-sm font-bold">
                     <Counter to={324} prefix="+" suffix="%" />
                   </span>
                   <span className="block text-[10px] font-medium text-white/75">
@@ -441,7 +441,7 @@ function Hero() {
                 ease: [0.16, 1, 0.3, 1],
               }}
               whileHover={{ y: -6 }}
-              className="relative flex items-center gap-3 rounded-3xl bg-[#F0453D] p-5 text-white shadow-[0_20px_45px_-15px_rgba(240,69,61,0.55)]"
+              className="relative flex items-center gap-3 rounded-3xl bg-[#EF1751] p-5 text-white shadow-[0_20px_45px_-15px_rgba(239,23,81,0.55)]"
             >
               <div className="flex items-end gap-1">
                 {[10, 18, 26, 34].map((h, i) => (
@@ -459,7 +459,7 @@ function Hero() {
                 ))}
               </div>
               <div>
-                <p className="text-lg font-extrabold leading-none">
+                <p className="text-lg font-bold leading-none">
                   <Counter to={324} prefix="+" suffix="%" />
                 </p>
                 <p className="mt-1 text-[11px] font-medium text-white/80">
@@ -497,7 +497,7 @@ function Hero() {
               {[0, 1].map((i) => (
                 <motion.span
                   key={i}
-                  className="absolute inset-0 rounded-full bg-[#F0453D]/40"
+                  className="absolute inset-0 rounded-full bg-[#EF1751]/40"
                   animate={{ scale: [1, 1.9], opacity: [0.6, 0] }}
                   transition={{
                     duration: 2.2,
@@ -601,7 +601,7 @@ function GetStartedForm({ onDone }) {
             delay: 0.1,
           }}
         >
-          <FiCheckCircle className="mb-4 text-6xl text-[#F0453D]" />
+          <FiCheckCircle className="mb-4 text-6xl text-[#EF1751]" />
         </motion.div>
         <h4 className="text-lg font-bold text-[#17171F]">Request received!</h4>
         <p className="mt-1 text-sm text-gray-500">
@@ -626,7 +626,7 @@ function GetStartedForm({ onDone }) {
           required
           type="text"
           placeholder="Your TikTok Shop brand"
-          className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#F0453D]"
+          className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#EF1751]"
         />
       </label>
       <label className="flex flex-col gap-1.5 text-sm font-medium text-[#17171F]">
@@ -635,12 +635,12 @@ function GetStartedForm({ onDone }) {
           required
           type="email"
           placeholder="you@brand.com"
-          className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#F0453D]"
+          className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#EF1751]"
         />
       </label>
       <label className="flex flex-col gap-1.5 text-sm font-medium text-[#17171F]">
         Monthly revenue (optional)
-        <select className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#F0453D]">
+        <select className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#EF1751]">
           <option>Just getting started</option>
           <option>$10k - $50k</option>
           <option>$50k - $200k</option>
@@ -651,10 +651,10 @@ function GetStartedForm({ onDone }) {
         type="submit"
         whileHover={{
           scale: 1.02,
-          boxShadow: "0 12px 28px -10px rgba(240,69,61,0.55)",
+          boxShadow: "0 12px 28px -10px rgba(239,23,81,0.55)",
         }}
         whileTap={{ scale: 0.97 }}
-        className="mt-2 flex items-center justify-center gap-2 rounded-full bg-[#F0453D] px-6 py-3 text-sm font-semibold text-white"
+        className="mt-2 flex items-center justify-center gap-2 rounded-full bg-[#EF1751] px-6 py-3 text-sm font-semibold text-white"
       >
         Send request
         <FiArrowRight />
@@ -697,7 +697,7 @@ function BookCallContent({ onDone }) {
             delay: 0.1,
           }}
         >
-          <FiCheckCircle className="mb-4 text-6xl text-[#F0453D]" />
+          <FiCheckCircle className="mb-4 text-6xl text-[#EF1751]" />
         </motion.div>
         <h4 className="text-lg font-bold text-[#17171F]">
           Call booked for {selectedSlot}
@@ -728,7 +728,7 @@ function BookCallContent({ onDone }) {
               key={topic}
               className="flex items-center gap-2.5 text-sm text-[#4B4B57]"
             >
-              <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[#F0453D]/10 text-[#F0453D]">
+              <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[#EF1751]/10 text-[#EF1751]">
                 <FiCheck size={11} />
               </span>
               {topic}
@@ -753,8 +753,8 @@ function BookCallContent({ onDone }) {
                 whileTap={{ scale: 0.96 }}
                 className={`rounded-full border px-3.5 py-2 text-xs font-semibold transition-colors ${
                   active
-                    ? "border-[#F0453D] bg-[#F0453D] text-white"
-                    : "border-black/10 text-[#4B4B57] hover:border-[#F0453D]/50"
+                    ? "border-[#EF1751] bg-[#EF1751] text-white"
+                    : "border-black/10 text-[#4B4B57] hover:border-[#EF1751]/50"
                 }`}
               >
                 {slot}
@@ -772,13 +772,13 @@ function BookCallContent({ onDone }) {
           selectedSlot
             ? {
                 scale: 1.02,
-                boxShadow: "0 12px 28px -10px rgba(240,69,61,0.55)",
+                boxShadow: "0 12px 28px -10px rgba(239,23,81,0.55)",
               }
             : {}
         }
         whileTap={selectedSlot ? { scale: 0.97 } : {}}
         className={`flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition-opacity ${
-          selectedSlot ? "bg-[#F0453D]" : "cursor-not-allowed bg-[#F0453D]/40"
+          selectedSlot ? "bg-[#EF1751]" : "cursor-not-allowed bg-[#EF1751]/40"
         }`}
       >
         Confirm call

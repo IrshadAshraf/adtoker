@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 import {
   FiSend,
   FiTwitter,
@@ -61,9 +61,9 @@ function Footer() {
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
-        className="absolute -top-24 left-5 right-5 mx-auto max-w-[1400px] rounded-[2rem] bg-[#F0453D] p-8 sm:p-12 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8"
+        className="absolute -top-24 left-5 right-5 mx-auto max-w-[1400px] rounded-[2rem] bg-[#EF1751] p-8 sm:p-12 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8"
       >
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-white text-center lg:text-left leading-tight">
+        <h2 className="text-xl sm:text-3xl font-bold text-white text-center lg:text-left leading-tight">
           Ready to Scale Your <br /> TikTok Shop?
         </h2>
 
@@ -76,7 +76,7 @@ function Footer() {
           </MagneticButton>
           <MagneticButton
             onClick={() => setDrawerType("consult")}
-            className="rounded-full border-2 border-white/40 px-8 py-4 text-sm font-bold text-white hover:bg-white hover:text-[#F0453D] transition-all"
+            className="rounded-full border-2 border-white/40 px-8 py-4 text-sm font-bold text-white hover:bg-white hover:text-[#EF1751] transition-all"
           >
             Schedule a Free Consultation
           </MagneticButton>
@@ -93,27 +93,64 @@ function Footer() {
               whileInView={{ opacity: 1 }}
               className="bg-white px-4 py-2 rounded-lg inline-block mb-8"
             >
-              <h1 className="text-2xl font-black tracking-tighter">
-                <span className="text-[#F0453D]">AD</span> TOKER
+              <h1 className="text-xl font-bold tracking-tighter">
+                <span className="text-[#EF1751]">AD</span> TOKER
               </h1>
             </motion.div>
 
-            <p className="text-white text-2xl sm:text-3xl font-bold leading-tight max-w-sm mb-10">
+            <p className="text-white text-lg sm:text-2xl font-semibold leading-tight max-w-sm mb-10">
               Let's build your next <br />
               <span className="text-gray-500">growth success story.</span>
             </p>
 
             {/* Newsletter Input */}
-            <div className="relative max-w-sm group">
+            <motion.div
+              className="relative max-w-sm group"
+              animate={{
+                y: [0, -8, 0],
+                boxShadow: [
+                  "0 8px 30px -10px rgba(239,23,81,0.15)",
+                  "0 20px 50px -10px rgba(239,23,81,0.4)",
+                  "0 8px 30px -10px rgba(239,23,81,0.15)",
+                ],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              whileHover={{ y: -12, scale: 1.02, transition: { duration: 0.3 } }}
+            >
+              {/* Pulse glow ring */}
+              <motion.span
+                aria-hidden
+                className="pointer-events-none absolute inset-0 rounded-full"
+                animate={{
+                  boxShadow: [
+                    "0 0 0px 0px rgba(239,23,81,0)",
+                    "0 0 0px 8px rgba(239,23,81,0.12)",
+                    "0 0 0px 0px rgba(239,23,81,0)",
+                  ],
+                }}
+                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+              />
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full bg-[#24242D] border border-white/5 rounded-full py-5 px-8 text-white outline-none focus:border-[#F0453D] transition-all"
+                className="w-full bg-[#24242D] border border-white/5 rounded-full py-5 px-8 text-white outline-none focus:border-[#EF1751] transition-all"
               />
-              <button className="absolute right-2 top-2 h-12 w-12 rounded-full bg-[#F0453D] flex items-center justify-center text-white transition-transform active:scale-90 group-hover:rotate-12">
+              <motion.button
+                className="absolute right-2 top-2 h-12 w-12 rounded-full bg-[#EF1751] flex items-center justify-center text-white group-hover:rotate-12"
+                whileHover={{ scale: 1.1, rotate: 20 }}
+                whileTap={{ scale: 0.9 }}
+                animate={{
+                  scale: [1, 1.06, 1],
+                }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              >
                 <FiSend size={18} />
-              </button>
-            </div>
+              </motion.button>
+            </motion.div>
           </div>
 
           {/* Divider Line */}
@@ -137,7 +174,7 @@ function Footer() {
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-gray-400 font-medium hover:text-[#F0453D] transition-colors"
+                      className="text-gray-400 font-medium hover:text-[#EF1751] transition-colors"
                     >
                       {link}
                     </a>
@@ -217,7 +254,7 @@ function Footer() {
               <motion.a
                 key={i}
                 href={social.link}
-                whileHover={{ y: -5, backgroundColor: "#F0453D" }}
+                whileHover={{ y: -5, backgroundColor: "#EF1751" }}
                 className="h-10 w-10 rounded-full bg-[#24242D] flex items-center justify-center text-white transition-colors"
               >
                 {social.icon}
@@ -238,13 +275,13 @@ function Footer() {
         <div className="space-y-6 py-4">
           <input
             placeholder="Full Name"
-            className="w-full bg-gray-50 border border-black/5 rounded-xl p-4 outline-none focus:border-[#F0453D]"
+            className="w-full bg-gray-50 border border-black/5 rounded-xl p-4 outline-none focus:border-[#EF1751]"
           />
           <input
             placeholder="Brand URL"
-            className="w-full bg-gray-50 border border-black/5 rounded-xl p-4 outline-none focus:border-[#F0453D]"
+            className="w-full bg-gray-50 border border-black/5 rounded-xl p-4 outline-none focus:border-[#EF1751]"
           />
-          <button className="w-full rounded-full bg-[#F0453D] py-4 font-bold text-white shadow-xl">
+          <button className="w-full rounded-full bg-[#EF1751] py-4 font-bold text-white shadow-xl">
             Get Your Free Roadmap
           </button>
         </div>
@@ -262,7 +299,7 @@ function Footer() {
             {["10:00 AM", "01:30 PM", "03:00 PM", "04:30 PM"].map((time) => (
               <button
                 key={time}
-                className="rounded-xl border border-black/10 p-3 text-sm font-semibold hover:border-[#F0453D] hover:text-[#F0453D]"
+                className="rounded-xl border border-black/10 p-3 text-sm font-semibold hover:border-[#EF1751] hover:text-[#EF1751]"
               >
                 {time}
               </button>

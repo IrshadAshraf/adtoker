@@ -217,7 +217,7 @@ function ServiceCard({ service, onOpen }) {
 
       {/* label pill */}
       <motion.div
-        className="absolute inset-x-5 bottom-5 flex items-center gap-3 rounded-2xl bg-[#FBEAEA]/95 px-4 py-3.5 backdrop-blur-sm"
+        className="absolute inset-x-5 bottom-5 flex items-center gap-3 rounded-2xl bg-[#FDE8EF]/95 px-4 py-3.5 backdrop-blur-sm"
         whileHover={shouldReduceMotion ? {} : { y: -6 }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
@@ -257,7 +257,7 @@ function ServiceDetails({ service, onGetStarted, onBookCall }) {
             transition={{ delay: 0.15 + i * 0.08, duration: 0.4 }}
             className="flex items-center gap-2.5 text-sm text-[#4B4B57]"
           >
-            <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[#F0453D]/10 text-[#F0453D]">
+            <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[#EF1751]/10 text-[#EF1751]">
               <FiCheck size={11} />
             </span>
             {feature}
@@ -271,10 +271,10 @@ function ServiceDetails({ service, onGetStarted, onBookCall }) {
           onClick={onGetStarted}
           whileHover={{
             scale: 1.02,
-            boxShadow: "0 12px 28px -10px rgba(240,69,61,0.55)",
+            boxShadow: "0 12px 28px -10px rgba(239,23,81,0.55)",
           }}
           whileTap={{ scale: 0.97 }}
-          className="flex items-center justify-center gap-2 rounded-full bg-[#F0453D] px-6 py-3 text-sm font-semibold text-white"
+          className="flex items-center justify-center gap-2 rounded-full bg-[#EF1751] px-6 py-3 text-sm font-semibold text-white"
         >
           Get Started
           <FiArrowRight />
@@ -282,7 +282,7 @@ function ServiceDetails({ service, onGetStarted, onBookCall }) {
         <motion.button
           type="button"
           onClick={onBookCall}
-          whileHover={{ scale: 1.02, borderColor: "#F0453D", color: "#F0453D" }}
+          whileHover={{ scale: 1.02, borderColor: "#EF1751", color: "#EF1751" }}
           whileTap={{ scale: 0.97 }}
           className="flex items-center justify-center gap-2 rounded-full border border-black/10 px-6 py-3 text-sm font-semibold text-[#17171F] transition-colors"
         >
@@ -319,7 +319,7 @@ function GetStartedForm({ onDone }) {
             delay: 0.1,
           }}
         >
-          <FiCheckCircle className="mb-4 text-6xl text-[#F0453D]" />
+          <FiCheckCircle className="mb-4 text-6xl text-[#EF1751]" />
         </motion.div>
         <h4 className="text-lg font-bold text-[#17171F]">Request received!</h4>
         <p className="mt-1 text-sm text-gray-500">
@@ -344,7 +344,7 @@ function GetStartedForm({ onDone }) {
           required
           type="text"
           placeholder="Your TikTok Shop brand"
-          className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#F0453D]"
+          className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#EF1751]"
         />
       </label>
       <label className="flex flex-col gap-1.5 text-sm font-medium text-[#17171F]">
@@ -353,12 +353,12 @@ function GetStartedForm({ onDone }) {
           required
           type="email"
           placeholder="you@brand.com"
-          className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#F0453D]"
+          className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#EF1751]"
         />
       </label>
       <label className="flex flex-col gap-1.5 text-sm font-medium text-[#17171F]">
         Which service are you interested in?
-        <select className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#F0453D]">
+        <select className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#EF1751]">
           {SERVICES.map((s) => (
             <option key={s.id}>{s.label}</option>
           ))}
@@ -368,10 +368,10 @@ function GetStartedForm({ onDone }) {
         type="submit"
         whileHover={{
           scale: 1.02,
-          boxShadow: "0 12px 28px -10px rgba(240,69,61,0.55)",
+          boxShadow: "0 12px 28px -10px rgba(239,23,81,0.55)",
         }}
         whileTap={{ scale: 0.97 }}
-        className="mt-2 flex items-center justify-center gap-2 rounded-full bg-[#F0453D] px-6 py-3 text-sm font-semibold text-white"
+        className="mt-2 flex items-center justify-center gap-2 rounded-full bg-[#EF1751] px-6 py-3 text-sm font-semibold text-white"
       >
         Send request
         <FiArrowRight />
@@ -409,7 +409,7 @@ function BookCallContent({ onDone }) {
             delay: 0.1,
           }}
         >
-          <FiCheckCircle className="mb-4 text-6xl text-[#F0453D]" />
+          <FiCheckCircle className="mb-4 text-6xl text-[#EF1751]" />
         </motion.div>
         <h4 className="text-lg font-bold text-[#17171F]">
           Call booked for {selectedSlot}
@@ -446,8 +446,8 @@ function BookCallContent({ onDone }) {
                 whileTap={{ scale: 0.96 }}
                 className={`rounded-full border px-3.5 py-2 text-xs font-semibold transition-colors ${
                   active
-                    ? "border-[#F0453D] bg-[#F0453D] text-white"
-                    : "border-black/10 text-[#4B4B57] hover:border-[#F0453D]/50"
+                    ? "border-[#EF1751] bg-[#EF1751] text-white"
+                    : "border-black/10 text-[#4B4B57] hover:border-[#EF1751]/50"
                 }`}
               >
                 {slot}
@@ -465,13 +465,13 @@ function BookCallContent({ onDone }) {
           selectedSlot
             ? {
                 scale: 1.02,
-                boxShadow: "0 12px 28px -10px rgba(240,69,61,0.55)",
+                boxShadow: "0 12px 28px -10px rgba(239,23,81,0.55)",
               }
             : {}
         }
         whileTap={selectedSlot ? { scale: 0.97 } : {}}
         className={`flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition-opacity ${
-          selectedSlot ? "bg-[#F0453D]" : "cursor-not-allowed bg-[#F0453D]/40"
+          selectedSlot ? "bg-[#EF1751]" : "cursor-not-allowed bg-[#EF1751]/40"
         }`}
       >
         Confirm call
@@ -512,7 +512,7 @@ function Services() {
       {/* ambient blobs, consistent with the rest of the page */}
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute -right-24 -top-10 h-80 w-80 rounded-full bg-[#F0453D]/10 blur-3xl"
+        className="pointer-events-none absolute -right-24 -top-10 h-80 w-80 rounded-full bg-[#EF1751]/10 blur-3xl"
         animate={
           shouldReduceMotion
             ? {}
@@ -528,10 +528,10 @@ function Services() {
             initial={{ opacity: 0, y: -12 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="relative inline-flex items-center gap-2 rounded-full bg-[#F0453D]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-[#F0453D]"
+            className="relative inline-flex items-center gap-2 rounded-full bg-[#EF1751]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-[#EF1751]"
           >
             <motion.span
-              className="h-1.5 w-1.5 rounded-full bg-[#F0453D]"
+              className="h-1.5 w-1.5 rounded-full bg-[#EF1751]"
               animate={
                 shouldReduceMotion
                   ? {}
@@ -550,7 +550,7 @@ function Services() {
             variants={lineContainer}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="mt-5 text-[2rem] font-extrabold leading-[1.15] tracking-tight text-[#17171F] sm:text-4xl"
+            className="mt-5 text-[1.5rem] font-bold leading-[1.15] tracking-tight text-[#17171F] sm:text-3xl lg:text-4xl"
           >
             {HEADLINE_LINES.map((words) => (
               <motion.span
@@ -603,7 +603,7 @@ function Services() {
           <HashLink
             smooth
             to="#contact"
-            className="font-semibold text-[#F0453D] underline-offset-2 hover:underline"
+            className="font-semibold text-[#EF1751] underline-offset-2 hover:underline"
           >
             Talk to a strategist
           </HashLink>

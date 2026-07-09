@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import Nav from "@/components/Nav";
 import Hero from "../components/Hero";
 import About from "@/components/About";
@@ -10,50 +11,80 @@ import Faqs from "@/components/Faqs";
 import Testimonials from "@/components/Testimonials";
 import Blogs from "@/components/Blogs";
 import Footer from "@/components/Footer";
+import Loader from "@/components/Loader";
+
+/* Reveal wrapper — fades + slides in once per section when scrolled into view */
+function RevealSection({ children, id, className = "" }) {
+  return (
+    <motion.section
+      id={id}
+      className={className}
+      initial={{ opacity: 0, y: 48 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.72, ease: [0.16, 1, 0.3, 1] }}
+    >
+      {children}
+    </motion.section>
+  );
+}
 
 function Home() {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <>
-      <Nav />
-      <section id="hero">
-        <Hero />
-      </section>
+      <Loader onComplete={() => setLoaded(true)} />
 
-      <section id="about">
-        <About />
-      </section>
+      {loaded && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Nav />
 
-      <section id="services">
-        <Services />
-      </section>
+          <RevealSection id="hero">
+            <Hero />
+          </RevealSection>
 
-      <section id="how-it-works">
-        <HowItWorks />
-      </section>
+          <RevealSection id="about">
+            <About />
+          </RevealSection>
 
-      <section id="why-choose-us">
-        <WhyChooseUs />
-      </section>
+          <RevealSection id="services">
+            <Services />
+          </RevealSection>
 
-      <section id="stats">
-        <Stats />
-      </section>
+          <RevealSection id="how-it-works">
+            <HowItWorks />
+          </RevealSection>
 
-      <section id="faqs">
-        <Faqs />
-      </section>
+          <RevealSection id="why-choose-us">
+            <WhyChooseUs />
+          </RevealSection>
 
-      <section id="testimonials">
-        <Testimonials />
-      </section>
+          <RevealSection id="stats">
+            <Stats />
+          </RevealSection>
 
-      <section id="blogs">
-        <Blogs />
-      </section>
+          <RevealSection id="faqs">
+            <Faqs />
+          </RevealSection>
 
-      <section id="footer">
-        <Footer />
-      </section>
+          <RevealSection id="testimonials">
+            <Testimonials />
+          </RevealSection>
+
+          <RevealSection id="blogs">
+            <Blogs />
+          </RevealSection>
+
+          <RevealSection id="footer">
+            <Footer />
+          </RevealSection>
+        </motion.div>
+      )}
     </>
   );
 }

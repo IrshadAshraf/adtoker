@@ -175,7 +175,7 @@ export default function AboutSection() {
       {/* ambient background blobs */}
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-[#F0453D]/10 blur-3xl"
+        className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-[#EF1751]/10 blur-3xl"
         animate={
           shouldReduceMotion
             ? {}
@@ -194,12 +194,12 @@ export default function AboutSection() {
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      <div className="relative mx-auto grid max-w-[1600px] grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-14">
+      <div className="relative mx-auto grid max-w-[1600px] grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-14">
         {/* ---------------------------------------------------------- */}
         {/* LEFT — image collage                                       */}
         {/* ---------------------------------------------------------- */}
         <motion.div
-          className="relative mx-auto h-[420px] w-full max-w-md sm:h-[480px]"
+          className="relative mx-auto h-[340px] w-full max-w-md sm:h-[420px] lg:h-[480px]"
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -219,7 +219,7 @@ export default function AboutSection() {
 
           {/* front image */}
           <motion.div
-            className="absolute bottom-0 right-0 h-[380px] w-[300px] overflow-hidden rounded-[140px] border-2 border-[#F0453D]/50 shadow-2xl sm:h-[430px] sm:w-[330px]"
+            className="absolute bottom-0 right-0 h-[380px] w-[300px] overflow-hidden rounded-[140px] border-2 border-[#EF1751]/50 shadow-2xl sm:h-[430px] sm:w-[330px]"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
@@ -288,7 +288,7 @@ export default function AboutSection() {
           {!shouldReduceMotion && (
             <motion.div
               aria-hidden
-              className="absolute right-8 top-4 h-3 w-3 rounded-full bg-[#F0453D]"
+              className="absolute right-8 top-4 h-3 w-3 rounded-full bg-[#EF1751]"
               animate={{ y: [0, -14, 0], opacity: [0.6, 1, 0.6] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             />
@@ -305,10 +305,10 @@ export default function AboutSection() {
         >
           <motion.span
             variants={itemVariants}
-            className="relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-[#F0453D]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-[#F0453D]"
+            className="relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-[#EF1751]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-[#EF1751]"
           >
             <motion.span
-              className="h-1.5 w-1.5 rounded-full bg-[#F0453D]"
+              className="h-1.5 w-1.5 rounded-full bg-[#EF1751]"
               animate={
                 shouldReduceMotion
                   ? {}
@@ -325,7 +325,7 @@ export default function AboutSection() {
 
           <motion.h2
             variants={itemVariants}
-            className="mt-5 max-w-lg text-[2.1rem] font-extrabold leading-[1.15] text-[#17171F] sm:text-4xl"
+            className="mt-5 max-w-lg text-[1.75rem] font-bold leading-[1.15] text-[#17171F] sm:text-4xl"
           >
             Empowering Brands to Win on TikTok Shop
           </motion.h2>
@@ -345,7 +345,7 @@ export default function AboutSection() {
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
                   <motion.span
-                    className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-[#F0453D] text-lg text-white"
+                    className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-[#EF1751] text-lg text-white"
                     whileHover={
                       shouldReduceMotion ? {} : { rotate: 180, scale: 1.08 }
                     }
@@ -367,11 +367,12 @@ export default function AboutSection() {
             })}
           </div>
 
-          {/* stat */}
+          {/* stat — always visible, right-aligned on desktop */}
           <motion.div
             variants={itemVariants}
-            className="mt-8 flex items-center gap-6 border-t border-[#17171F]/10 pt-6 sm:hidden"
+            className="mt-8 flex items-center justify-end gap-6 border-t border-[#17171F]/10 pt-6"
           >
+            <div className="flex-1" />
             <StatBlock
               isInView={isInView}
               shouldReduceMotion={shouldReduceMotion}
@@ -385,7 +386,7 @@ export default function AboutSection() {
           >
             <MagneticButton
               onClick={() => openDrawer(null)}
-              className="group relative flex items-center gap-2 overflow-hidden rounded-full bg-[#F0453D] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#F0453D]/30"
+              className="group relative flex items-center gap-2 overflow-hidden rounded-full bg-[#EF1751] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#EF1751]/30"
             >
               <span className="relative z-10">More About Us</span>
               <FiArrowUpRight className="relative z-10 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -437,7 +438,7 @@ export default function AboutSection() {
                       <FaStar
                         className={
                           n <= (hoverRating || rating || 5)
-                            ? "text-[#F0453D]"
+                            ? "text-[#EF1751]"
                             : "text-gray-200"
                         }
                       />
@@ -447,7 +448,7 @@ export default function AboutSection() {
                 <HashLink
                   smooth
                   to="#testimonials"
-                  className="mt-0.5 block text-xs text-gray-500 underline-offset-2 hover:text-[#F0453D] hover:underline"
+                  className="mt-0.5 block text-xs text-gray-500 underline-offset-2 hover:text-[#EF1751] hover:underline"
                 >
                   Client Satisfaction Rate
                 </HashLink>
@@ -456,18 +457,7 @@ export default function AboutSection() {
           </motion.div>
         </motion.div>
 
-        {/* stat — desktop, sits in the gap between columns like the reference */}
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          animate={isInView ? "show" : "hidden"}
-          className="absolute right-[26%] top-1/2 hidden -translate-y-1/2 border-l border-[#17171F]/10 pl-8 lg:block"
-        >
-          <StatBlock
-            isInView={isInView}
-            shouldReduceMotion={shouldReduceMotion}
-          />
-        </motion.div>
+
       </div>
 
       {/* toast for the star-rating micro interaction */}
@@ -512,8 +502,8 @@ export default function AboutSection() {
                 onClick={() => setActivePillar(p)}
                 className={`rounded-xl border px-3 py-3 text-left text-xs font-semibold transition-colors ${
                   activePillar?.id === p.id
-                    ? "border-[#F0453D] bg-[#F0453D]/5 text-[#F0453D]"
-                    : "border-gray-200 text-gray-500 hover:border-[#F0453D]/40"
+                    ? "border-[#EF1751] bg-[#EF1751]/5 text-[#EF1751]"
+                    : "border-gray-200 text-gray-500 hover:border-[#EF1751]/40"
                 }`}
               >
                 {p.title}
@@ -522,7 +512,7 @@ export default function AboutSection() {
           </div>
 
           <div className="rounded-2xl bg-gray-50 p-4">
-            <p className="text-2xl font-extrabold text-[#17171F]">
+            <p className="text-2xl font-bold text-[#17171F]">
               <AnimatedCounter value={25} suffix="+" />
               <span className="ml-1 text-sm font-medium text-gray-500">
                 brand partners scaled
@@ -562,7 +552,7 @@ function StatBlock({ isInView, shouldReduceMotion }) {
       transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
       style={{ transformOrigin: "top" }}
     >
-      <p className="text-4xl font-extrabold text-[#17171F] sm:text-5xl">
+      <p className="text-4xl font-bold text-[#17171F] sm:text-5xl">
         <AnimatedCounter value={25} suffix="+" />
       </p>
       <p className="mt-1 max-w-[9rem] text-sm text-gray-500">

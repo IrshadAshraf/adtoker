@@ -58,7 +58,7 @@ function AnimatedStat({ value, suffix, duration = 2, shouldReduceMotion }) {
   return (
     <motion.p
       ref={ref}
-      className="text-4xl font-extrabold leading-none text-white sm:text-5xl"
+      className="text-2xl font-bold leading-none text-white sm:text-3xl lg:text-4xl"
       animate={
         done && !shouldReduceMotion
           ? {
@@ -87,11 +87,11 @@ function AnimatedStat({ value, suffix, duration = 2, shouldReduceMotion }) {
 
 function StatsBackground({ shouldReduceMotion }) {
   if (shouldReduceMotion) {
-    return <div className="absolute inset-0 bg-[#F0453D]" />;
+    return <div className="absolute inset-0 bg-[#EF1751]" />;
   }
 
   return (
-    <div className="absolute inset-0 overflow-hidden bg-[#F0453D]">
+    <div className="absolute inset-0 overflow-hidden bg-[#EF1751]">
       {/* fast diagonal marching stripes */}
       <motion.div
         aria-hidden
@@ -170,7 +170,7 @@ function Stats() {
         initial={{ opacity: 0, y: 40, scale: 0.97 }}
         animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="relative mx-auto max-w-[1600px] overflow-hidden rounded-tl-[64px] rounded-tr-2xl rounded-bl-2xl rounded-br-[64px] shadow-[0_25px_60px_-20px_rgba(240,69,61,0.45)]"
+        className="relative mx-auto max-w-[1600px] overflow-hidden rounded-tl-[64px] rounded-tr-2xl rounded-bl-2xl rounded-br-[64px] shadow-[0_25px_60px_-20px_rgba(239,23,81,0.45)]"
       >
         <StatsBackground shouldReduceMotion={shouldReduceMotion} />
 

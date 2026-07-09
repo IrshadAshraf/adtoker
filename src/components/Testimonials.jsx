@@ -123,9 +123,9 @@ function Testimonials() {
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-4 inline-flex items-center gap-2 rounded-full bg-[#FAF5F5] px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#17171F]"
+            className="mb-4 inline-flex items-center gap-2 rounded-full bg-[#F9EDF2] px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#17171F]"
           >
-            <span className="h-2 w-2 rounded-full bg-[#F0453D] animate-pulse" />
+            <span className="h-2 w-2 rounded-full bg-[#EF1751] animate-pulse" />
             Testimonials
           </motion.span>
           <motion.h2
@@ -133,7 +133,7 @@ function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="max-w-2xl text-4xl font-extrabold leading-[1.1] text-[#111118] sm:text-6xl"
+            className="max-w-2xl text-[1.75rem] font-bold leading-[1.1] text-[#111118] sm:text-4xl lg:text-5xl"
           >
             What Our Happy <br /> Clients Says
           </motion.h2>
@@ -146,7 +146,7 @@ function Testimonials() {
             animate={{ y: [0, -12, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           >
-            <TiltCard className="group relative h-full min-h-[450px] overflow-hidden rounded-[2.5rem] shadow-2xl">
+            <TiltCard className="group relative h-full min-h-[300px] overflow-hidden rounded-[2.5rem] shadow-2xl sm:min-h-[420px]">
               <img
                 src={mainImage}
                 alt="Main"
@@ -166,11 +166,11 @@ function Testimonials() {
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center gap-3">
                     <FaGoogle className="text-xl text-[#4285F4]" />
-                    <span className="text-xl font-extrabold text-[#111118]">
+                    <span className="text-xl font-bold text-[#111118]">
                       4.9/5
                     </span>
                   </div>
-                  <div className="flex gap-0.5 text-[#F0453D]">
+                  <div className="flex gap-0.5 text-[#EF1751]">
                     {[...Array(5)].map((_, i) => (
                       <FiStar key={i} fill="currentColor" size={14} />
                     ))}
@@ -195,15 +195,15 @@ function Testimonials() {
                 delay: review.floatDelay,
               }}
             >
-              <div className="flex h-full flex-col justify-between rounded-[2.5rem] bg-[#FDF9F3] p-10 transition-all hover:shadow-2xl hover:shadow-[#F0453D]/10">
+              <div className="flex h-full flex-col justify-between rounded-[2.5rem] bg-[#F9EDF2] p-10 transition-all hover:shadow-2xl hover:shadow-[#EF1751]/10">
                 <div>
-                  <div className="mb-8 flex gap-1 text-[#F0453D]">
+                  <div className="mb-8 flex gap-1 text-[#EF1751]">
                     {[...Array(5)].map((_, i) => (
                       <FiStar key={i} fill="currentColor" size={20} />
                     ))}
                   </div>
                   <div className="relative">
-                    <RiDoubleQuotesL className="absolute -left-6 -top-4 text-4xl text-[#F0453D]/10" />
+                    <RiDoubleQuotesL className="absolute -left-6 -top-4 text-4xl text-[#EF1751]/10" />
                     <p className="relative text-lg leading-relaxed text-[#111118]">
                       “{review.quote}”
                     </p>
@@ -222,7 +222,7 @@ function Testimonials() {
                     whileHover={{
                       scale: 1.25,
                       rotate: 0,
-                      borderColor: "#F0453D",
+                      borderColor: "#EF1751",
                     }}
                     className="h-14 w-14 cursor-pointer overflow-hidden rounded-full border-2 border-white shadow-lg transition-colors"
                   >
@@ -270,7 +270,7 @@ function Testimonials() {
             </div>
             <motion.div
               whileHover={{ rotate: 45, scale: 1.2 }}
-              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[#F0453D] text-white shadow-lg"
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[#EF1751] text-white shadow-lg"
             >
               <FiArrowRight size={18} />
             </motion.div>
@@ -280,15 +280,15 @@ function Testimonials() {
             Where smart design and clean energy come together powerfully —
             <button
               onClick={() => setIsDrawerOpen(true)}
-              className="ml-2 font-black text-[#F0453D] transition-opacity hover:opacity-70"
+              className="ml-2 font-bold text-[#EF1751] transition-opacity hover:opacity-70"
             >
               View All Reviews
             </button>
           </p>
 
           <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-4">
-            <span className="text-lg font-black text-[#111118]">4.9/5</span>
-            <div className="flex gap-0.5 text-[#F0453D]">
+            <span className="text-lg font-bold text-[#111118]">4.9/5</span>
+            <div className="flex gap-0.5 text-[#EF1751]">
               {[...Array(5)].map((_, i) => (
                 <FiStar key={i} fill="currentColor" size={14} />
               ))}
@@ -316,7 +316,7 @@ function Testimonials() {
           </p>
           <MagneticButton
             onClick={() => setIsDrawerOpen(false)}
-            className="w-full rounded-full bg-[#111118] py-4 font-bold text-white shadow-xl transition-all hover:bg-[#F0453D]"
+            className="w-full rounded-full bg-[#111118] py-4 font-bold text-white shadow-xl transition-all hover:bg-[#EF1751]"
           >
             Book My Strategy Call
           </MagneticButton>

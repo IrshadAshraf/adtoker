@@ -172,8 +172,8 @@ const AccordionItem = ({ faq, isOpen, toggle, isCompact = false }) => {
       whileHover={{ y: -4, transition: { duration: 0.2 } }}
       className={`group mb-4 overflow-hidden rounded-2xl border transition-all duration-300 ${
         isOpen
-          ? "border-[#F0453D]/20 bg-white shadow-[0_15px_30px_-10px_rgba(240,69,61,0.1)]"
-          : "border-transparent bg-[#FAF5F5]/60 hover:bg-white hover:shadow-md"
+          ? "border-[#EF1751]/20 bg-white shadow-[0_15px_30px_-10px_rgba(239,23,81,0.1)]"
+          : "border-transparent bg-[#F9EDF2]/60 hover:bg-white hover:shadow-md"
       }`}
     >
       <button
@@ -182,7 +182,7 @@ const AccordionItem = ({ faq, isOpen, toggle, isCompact = false }) => {
       >
         <span className="flex items-center gap-4">
           <span
-            className={`font-bold transition-colors ${isOpen ? "text-[#F0453D]" : "text-[#17171F]"} ${isCompact ? "text-base" : "text-lg"}`}
+            className={`font-bold transition-colors ${isOpen ? "text-[#EF1751]" : "text-[#17171F]"} ${isCompact ? "text-base" : "text-lg"}`}
           >
             {faq.id}.
           </span>
@@ -196,9 +196,9 @@ const AccordionItem = ({ faq, isOpen, toggle, isCompact = false }) => {
           animate={{
             rotate: isOpen ? 180 : 0,
             scale: isOpen ? 1.1 : 1,
-            backgroundColor: isOpen ? "#17171F" : "#F0453D15",
+            backgroundColor: isOpen ? "#17171F" : "#EF175115",
           }}
-          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors ${isOpen ? "text-white" : "text-[#F0453D]"}`}
+          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors ${isOpen ? "text-white" : "text-[#EF1751]"}`}
         >
           {isOpen ? <FiMinus /> : <FiPlus />}
         </motion.div>
@@ -247,11 +247,11 @@ function Faqs() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full bg-[#FAF5F5] px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#17171F]"
+              className="mb-6 inline-flex items-center gap-2 rounded-full bg-[#F9EDF2] px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#17171F]"
             >
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#F0453D] opacity-75"></span>
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-[#F0453D]"></span>
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#EF1751] opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-[#EF1751]"></span>
               </span>
               FAQ
             </motion.div>
@@ -261,20 +261,20 @@ function Faqs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="mb-8 text-[2.5rem] font-extrabold leading-[1.1] text-[#111118] sm:text-6xl"
+              className="mb-8 text-[1.75rem] font-bold leading-[1.1] text-[#111118] sm:text-4xl lg:text-5xl"
             >
               Frequently Asked <br />
-              <span className="text-[#F0453D]">Questions</span>
+              <span className="text-[#EF1751]">Questions</span>
             </motion.h2>
 
             <MagneticButton
               onClick={() => setViewAllOpen(true)}
               whileHover={{
                 scale: 1.07,
-                boxShadow: "0 18px 40px -10px rgba(240,69,61,0.65)",
+                boxShadow: "0 18px 40px -10px rgba(239,23,81,0.65)",
               }}
               whileTap={{ scale: 0.94 }}
-              className="group flex items-center gap-2 rounded-full bg-[#F0453D] px-8 py-4 font-bold text-white shadow-lg"
+              className="group flex items-center gap-2 rounded-full bg-[#EF1751] px-8 py-4 font-bold text-white shadow-lg"
             >
               View All FAQ's <FiArrowUpRight size={18} />
             </MagneticButton>
@@ -311,8 +311,8 @@ function Faqs() {
                 onClick={() => setStrategyCallOpen(true)}
                 whileHover={{
                   scale: 1.07,
-                  borderColor: "#F0453D",
-                  color: "#F0453D",
+                  borderColor: "#EF1751",
+                  color: "#EF1751",
                   y: -3,
                 }}
                 whileTap={{ scale: 0.94 }}
@@ -366,7 +366,7 @@ function Faqs() {
             {["Mon 10am", "Tue 2pm", "Wed 11am", "Thu 4pm"].map((slot) => (
               <button
                 key={slot}
-                className="rounded-xl border border-black/10 p-3 text-sm font-semibold hover:border-[#F0453D] hover:text-[#F0453D]"
+                className="rounded-xl border border-black/10 p-3 text-sm font-semibold hover:border-[#EF1751] hover:text-[#EF1751]"
               >
                 {slot}
               </button>
@@ -374,7 +374,7 @@ function Faqs() {
           </div>
           <MagneticButton
             whileHover={{ scale: 1.02 }}
-            className="w-full rounded-full bg-[#F0453D] py-4 font-bold text-white shadow-lg"
+            className="w-full rounded-full bg-[#EF1751] py-4 font-bold text-white shadow-lg"
           >
             Confirm Booking
           </MagneticButton>

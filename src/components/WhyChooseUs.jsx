@@ -168,10 +168,10 @@ function FeatureDetails({ feature, onGetStarted, onBookCall }) {
           onClick={onGetStarted}
           whileHover={{
             scale: 1.02,
-            boxShadow: "0 12px 28px -10px rgba(240,69,61,0.55)",
+            boxShadow: "0 12px 28px -10px rgba(239,23,81,0.55)",
           }}
           whileTap={{ scale: 0.97 }}
-          className="flex items-center justify-center gap-2 rounded-full bg-[#F0453D] px-6 py-3 text-sm font-semibold text-white"
+          className="flex items-center justify-center gap-2 rounded-full bg-[#EF1751] px-6 py-3 text-sm font-semibold text-white"
         >
           Get Started
           <FiArrowRight />
@@ -179,7 +179,7 @@ function FeatureDetails({ feature, onGetStarted, onBookCall }) {
         <motion.button
           type="button"
           onClick={onBookCall}
-          whileHover={{ scale: 1.02, borderColor: "#F0453D", color: "#F0453D" }}
+          whileHover={{ scale: 1.02, borderColor: "#EF1751", color: "#EF1751" }}
           whileTap={{ scale: 0.97 }}
           className="flex items-center justify-center gap-2 rounded-full border border-black/10 px-6 py-3 text-sm font-semibold text-[#17171F] transition-colors"
         >
@@ -216,7 +216,7 @@ function GetStartedForm({ onDone }) {
             delay: 0.1,
           }}
         >
-          <FiCheckCircle className="mb-4 text-6xl text-[#F0453D]" />
+          <FiCheckCircle className="mb-4 text-6xl text-[#EF1751]" />
         </motion.div>
         <h4 className="text-lg font-bold text-[#17171F]">Request received!</h4>
         <p className="mt-1 text-sm text-gray-500">
@@ -241,7 +241,7 @@ function GetStartedForm({ onDone }) {
           required
           type="text"
           placeholder="Your TikTok Shop brand"
-          className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#F0453D]"
+          className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#EF1751]"
         />
       </label>
       <label className="flex flex-col gap-1.5 text-sm font-medium text-[#17171F]">
@@ -250,17 +250,17 @@ function GetStartedForm({ onDone }) {
           required
           type="email"
           placeholder="you@brand.com"
-          className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#F0453D]"
+          className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#EF1751]"
         />
       </label>
       <motion.button
         type="submit"
         whileHover={{
           scale: 1.02,
-          boxShadow: "0 12px 28px -10px rgba(240,69,61,0.55)",
+          boxShadow: "0 12px 28px -10px rgba(239,23,81,0.55)",
         }}
         whileTap={{ scale: 0.97 }}
-        className="mt-2 flex items-center justify-center gap-2 rounded-full bg-[#F0453D] px-6 py-3 text-sm font-semibold text-white"
+        className="mt-2 flex items-center justify-center gap-2 rounded-full bg-[#EF1751] px-6 py-3 text-sm font-semibold text-white"
       >
         Send request
         <FiArrowRight />
@@ -298,7 +298,7 @@ function BookCallContent({ onDone }) {
             delay: 0.1,
           }}
         >
-          <FiCheckCircle className="mb-4 text-6xl text-[#F0453D]" />
+          <FiCheckCircle className="mb-4 text-6xl text-[#EF1751]" />
         </motion.div>
         <h4 className="text-lg font-bold text-[#17171F]">
           Call booked for {selectedSlot}
@@ -335,8 +335,8 @@ function BookCallContent({ onDone }) {
                 whileTap={{ scale: 0.96 }}
                 className={`rounded-full border px-3.5 py-2 text-xs font-semibold transition-colors ${
                   active
-                    ? "border-[#F0453D] bg-[#F0453D] text-white"
-                    : "border-black/10 text-[#4B4B57] hover:border-[#F0453D]/50"
+                    ? "border-[#EF1751] bg-[#EF1751] text-white"
+                    : "border-black/10 text-[#4B4B57] hover:border-[#EF1751]/50"
                 }`}
               >
                 {slot}
@@ -354,13 +354,13 @@ function BookCallContent({ onDone }) {
           selectedSlot
             ? {
                 scale: 1.02,
-                boxShadow: "0 12px 28px -10px rgba(240,69,61,0.55)",
+                boxShadow: "0 12px 28px -10px rgba(239,23,81,0.55)",
               }
             : {}
         }
         whileTap={selectedSlot ? { scale: 0.97 } : {}}
         className={`flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition-opacity ${
-          selectedSlot ? "bg-[#F0453D]" : "cursor-not-allowed bg-[#F0453D]/40"
+          selectedSlot ? "bg-[#EF1751]" : "cursor-not-allowed bg-[#EF1751]/40"
         }`}
       >
         Confirm call
@@ -423,10 +423,10 @@ function WhyChooseUs() {
             initial={{ opacity: 0, y: -12 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 rounded-full bg-[#F0453D]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-[#F0453D]"
+            className="inline-flex items-center gap-2 rounded-full bg-[#EF1751]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-[#EF1751]"
           >
             <motion.span
-              className="h-1.5 w-1.5 rounded-full bg-[#F0453D]"
+              className="h-1.5 w-1.5 rounded-full bg-[#EF1751]"
               animate={
                 shouldReduceMotion
                   ? {}
@@ -445,7 +445,7 @@ function WhyChooseUs() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-5 text-[2rem] font-extrabold leading-tight text-[#17171F] sm:text-4xl"
+            className="mt-5 text-[1.5rem] font-bold leading-tight text-[#17171F] sm:text-3xl lg:text-4xl"
           >
             Why Choose AdToker?
           </motion.h2>
@@ -458,7 +458,7 @@ function WhyChooseUs() {
             variants={colVariants}
             initial="hidden"
             animate={isInView ? "show" : "hidden"}
-            className="flex flex-col divide-y divide-black/5 rounded-3xl bg-[#FBEAEA] p-6 lg:col-span-3"
+            className="flex flex-col divide-y divide-black/5 rounded-3xl bg-[#FDE8EF] p-6 lg:col-span-3"
           >
             <motion.button
               type="button"
@@ -467,7 +467,7 @@ function WhyChooseUs() {
               whileHover={shouldReduceMotion ? {} : { x: 4 }}
               className="pb-5 text-left"
             >
-              <p className="text-4xl font-extrabold text-[#17171F] sm:text-5xl">
+              <p className="text-3xl font-bold text-[#17171F] sm:text-4xl">
                 <AnimatedCounter value={5} suffix="K+" />
               </p>
               <p className="mt-2 text-sm leading-relaxed text-gray-600">
@@ -483,7 +483,7 @@ function WhyChooseUs() {
               className="group flex items-start gap-3 py-5 text-left"
             >
               <motion.span
-                className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#F0453D] text-white"
+                className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#EF1751] text-white"
                 whileHover={
                   shouldReduceMotion ? {} : { rotate: 180, scale: 1.1 }
                 }
@@ -515,7 +515,7 @@ function WhyChooseUs() {
                       key={src}
                       src={src}
                       alt="Client avatar"
-                      className="h-9 w-9 rounded-full border-2 border-[#FBEAEA] object-cover"
+                      className="h-9 w-9 rounded-full border-2 border-[#FDE8EF] object-cover"
                       style={{ zIndex: SUPPORT_AVATARS.length - i }}
                       whileHover={{ scale: 1.2, zIndex: 10, y: -4 }}
                       transition={{
@@ -527,7 +527,7 @@ function WhyChooseUs() {
                   ))}
                 </span>
                 <span className="flex items-center gap-1 text-sm font-bold text-[#17171F]">
-                  <FaStar className="text-[#F0453D]" size={13} />
+                  <FaStar className="text-[#EF1751]" size={13} />
                   <AnimatedCounter value={4.5} decimals={1} />
                 </span>
               </div>
@@ -563,10 +563,10 @@ function WhyChooseUs() {
               variants={fadeUp}
               onClick={() => openFeature("reporting")}
               whileHover={shouldReduceMotion ? {} : { y: -6 }}
-              className="group relative overflow-hidden rounded-3xl bg-[#F0453D] p-6 text-left text-white shadow-[0_20px_45px_-18px_rgba(240,69,61,0.55)]"
+              className="group relative overflow-hidden rounded-3xl bg-[#EF1751] p-6 text-left text-white shadow-[0_20px_45px_-18px_rgba(239,23,81,0.55)]"
             >
               <motion.span
-                className="grid h-11 w-11 place-items-center rounded-full bg-white text-[#F0453D]"
+                className="grid h-11 w-11 place-items-center rounded-full bg-white text-[#EF1751]"
                 whileHover={
                   shouldReduceMotion ? {} : { rotate: 180, scale: 1.1 }
                 }
@@ -608,7 +608,7 @@ function WhyChooseUs() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
               <div className="absolute inset-x-5 bottom-5 flex items-center gap-3">
                 <motion.span
-                  className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#F0453D] text-white"
+                  className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#EF1751] text-white"
                   whileHover={
                     shouldReduceMotion ? {} : { rotate: 180, scale: 1.1 }
                   }
@@ -636,7 +636,7 @@ function WhyChooseUs() {
             className="flex items-center gap-3 rounded-full bg-[#17171F] py-2 pl-2 pr-6 shadow-lg"
           >
             <motion.span
-              className="flex items-center gap-1.5 rounded-full bg-[#F0453D] px-4 py-2 text-xs font-bold uppercase tracking-wide text-white"
+              className="flex items-center gap-1.5 rounded-full bg-[#EF1751] px-4 py-2 text-xs font-bold uppercase tracking-wide text-white"
               animate={
                 shouldReduceMotion ? {} : { rotate: [0, -10, 10, -6, 0] }
               }
@@ -650,7 +650,7 @@ function WhyChooseUs() {
               <button
                 type="button"
                 onClick={openBookCall}
-                className="font-semibold text-[#F0453D] underline underline-offset-2 hover:text-[#ff6259]"
+                className="font-semibold text-[#EF1751] underline underline-offset-2 hover:text-[#EF1751]"
               >
                 Book A Free call
               </button>

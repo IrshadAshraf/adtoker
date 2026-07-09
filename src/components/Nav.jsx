@@ -59,7 +59,7 @@ function MagneticButton({
       style={{ x: springX, y: springY }}
       whileHover={{
         scale: 1.06,
-        boxShadow: "0 14px 34px -8px rgba(240,69,61,0.65)",
+        boxShadow: "0 14px 34px -8px rgba(239,23,81,0.65)",
       }}
       whileTap={{ scale: 0.94 }}
       className={className}
@@ -121,21 +121,13 @@ function Nav() {
       >
         <nav className="mx-auto flex max-w-[1600px] items-center justify-between px-5 py-4 sm:px-10">
           {/* Logo */}
-          <motion.a
+          <a
             href="#hero"
-            initial={{ opacity: 0, x: -16 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.15, duration: 0.6 }}
-            whileHover={{
-              scale: 1.06,
-              rotate: [0, -4, 4, 0],
-              transition: { duration: 0.5 },
-            }}
-            className="flex items-center gap-1 rounded-xl bg-white px-3 py-1.5 text-lg font-extrabold tracking-tight shadow-sm ring-1 ring-black/5"
+            className="flex items-center gap-1 rounded-xl bg-white px-3 py-1.5 text-lg font-bold tracking-tight shadow-sm ring-1 ring-black/5"
           >
-            <span className="text-[#F0453D]">AD</span>
+            <span className="text-[#EF1751]">AD</span>
             <span className="text-[#16213E]">TOKER</span>
-          </motion.a>
+          </a>
 
           {/* Desktop links */}
           <ul
@@ -174,7 +166,7 @@ function Nav() {
                   {showUnderline && (
                     <motion.span
                       layoutId="nav-underline"
-                      className="absolute -bottom-1.5 left-0 h-[2px] w-full rounded-full bg-[#F0453D]"
+                      className="absolute -bottom-1.5 left-0 h-[2px] w-full rounded-full bg-[#EF1751]"
                       transition={{
                         type: "spring",
                         stiffness: 420,
@@ -191,7 +183,7 @@ function Nav() {
           <div className="flex items-center gap-3">
             <MagneticButton
               onClick={() => setDrawerOpen(true)}
-              className="hidden items-center gap-2 rounded-full bg-[#F0453D] px-5 py-2.5 text-sm font-semibold text-white sm:inline-flex"
+              className="hidden items-center gap-2 rounded-full bg-[#EF1751] px-5 py-2.5 text-sm font-semibold text-white sm:inline-flex"
             >
               Get Started
             </MagneticButton>
@@ -241,7 +233,7 @@ function Nav() {
                       smooth
                       to={link.to}
                       onClick={() => setMobileOpen(false)}
-                      className="block rounded-lg px-3 py-2.5 text-sm font-medium text-[#17171F] hover:bg-[#F0453D]/5"
+                      className="block rounded-lg px-3 py-2.5 text-sm font-medium text-[#17171F] hover:bg-[#EF1751]/5"
                     >
                       {link.label}
                     </HashLink>
@@ -259,7 +251,7 @@ function Nav() {
                       setMobileOpen(false);
                       setDrawerOpen(true);
                     }}
-                    className="flex w-full items-center justify-center gap-2 rounded-full bg-[#F0453D] px-5 py-2.5 text-sm font-semibold text-white"
+                    className="flex w-full items-center justify-center gap-2 rounded-full bg-[#EF1751] px-5 py-2.5 text-sm font-semibold text-white"
                   >
                     Get Started
                     <FiArrowRight />
@@ -313,7 +305,7 @@ function NavGetStartedForm({ onDone }) {
               delay: 0.1,
             }}
           >
-            <FiCheckCircle className="mb-4 text-6xl text-[#F0453D]" />
+            <FiCheckCircle className="mb-4 text-6xl text-[#EF1751]" />
           </motion.div>
           <h4 className="text-lg font-bold text-[#17171F]">
             You're on the list!
@@ -341,7 +333,7 @@ function NavGetStartedForm({ onDone }) {
         >
           <label className="flex flex-col gap-1.5 text-sm font-medium text-[#17171F]">
             Full name
-            <span className="flex items-center gap-2 rounded-xl border border-black/10 px-3.5 py-2.5 focus-within:border-[#F0453D]">
+            <span className="flex items-center gap-2 rounded-xl border border-black/10 px-3.5 py-2.5 focus-within:border-[#EF1751]">
               <FiUser className="text-gray-400" />
               <input
                 required
@@ -353,7 +345,7 @@ function NavGetStartedForm({ onDone }) {
           </label>
           <label className="flex flex-col gap-1.5 text-sm font-medium text-[#17171F]">
             Work email
-            <span className="flex items-center gap-2 rounded-xl border border-black/10 px-3.5 py-2.5 focus-within:border-[#F0453D]">
+            <span className="flex items-center gap-2 rounded-xl border border-black/10 px-3.5 py-2.5 focus-within:border-[#EF1751]">
               <FiMail className="text-gray-400" />
               <input
                 required
@@ -367,10 +359,10 @@ function NavGetStartedForm({ onDone }) {
             type="submit"
             whileHover={{
               scale: 1.02,
-              boxShadow: "0 12px 28px -10px rgba(240,69,61,0.55)",
+              boxShadow: "0 12px 28px -10px rgba(239,23,81,0.55)",
             }}
             whileTap={{ scale: 0.97 }}
-            className="mt-2 flex items-center justify-center gap-2 rounded-full bg-[#F0453D] px-6 py-3 text-sm font-semibold text-white"
+            className="mt-2 flex items-center justify-center gap-2 rounded-full bg-[#EF1751] px-6 py-3 text-sm font-semibold text-white"
           >
             Send request
             <FiArrowRight />

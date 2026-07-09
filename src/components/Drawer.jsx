@@ -57,7 +57,7 @@ function Drawer({ isOpen, onClose, title, subtitle, icon, children }) {
                       stiffness: 260,
                       damping: 16,
                     }}
-                    className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-[#F0453D]/10 text-xl text-[#F0453D]"
+                    className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-[#EF1751]/10 text-xl text-[#EF1751]"
                   >
                     {icon}
                   </motion.div>
@@ -90,7 +90,7 @@ function Drawer({ isOpen, onClose, title, subtitle, icon, children }) {
                 aria-label="Close panel"
                 whileHover={{
                   rotate: 90,
-                  backgroundColor: "#F0453D",
+                  backgroundColor: "#EF1751",
                   color: "#ffffff",
                 }}
                 whileTap={{ scale: 0.9 }}

@@ -143,7 +143,7 @@ function StepCard({ step, onOpen }) {
       variants={cardVariants}
       onClick={() => onOpen(step)}
       whileHover={
-        shouldReduceMotion ? {} : { y: -6, borderColor: "rgba(240,69,61,0.5)" }
+        shouldReduceMotion ? {} : { y: -6, borderColor: "rgba(239,23,81,0.5)" }
       }
       whileTap={{ scale: 0.98 }}
       className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#17171C] p-6 text-left transition-colors sm:p-7"
@@ -151,7 +151,7 @@ function StepCard({ step, onOpen }) {
       {/* glow that blooms on hover */}
       <motion.span
         aria-hidden
-        className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#F0453D]/0 blur-2xl transition-colors duration-500 group-hover:bg-[#F0453D]/20"
+        className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#EF1751]/0 blur-2xl transition-colors duration-500 group-hover:bg-[#EF1751]/20"
       />
 
       <div className="relative flex items-start justify-between gap-4">
@@ -160,11 +160,11 @@ function StepCard({ step, onOpen }) {
         </h3>
         <motion.span
           aria-hidden
-          className="select-none text-5xl font-extrabold leading-none text-[#F0453D]/25 sm:text-6xl"
+          className="select-none text-5xl font-bold leading-none text-[#EF1751]/25 sm:text-6xl"
           whileHover={
             shouldReduceMotion
               ? {}
-              : { scale: 1.08, color: "rgba(240,69,61,0.5)" }
+              : { scale: 1.08, color: "rgba(239,23,81,0.5)" }
           }
         >
           {step.num}
@@ -179,7 +179,7 @@ function StepCard({ step, onOpen }) {
         aria-hidden
         initial={{ opacity: 0, x: -6 }}
         whileHover={shouldReduceMotion ? {} : { opacity: 1, x: 0 }}
-        className="relative mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-[#F0453D] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        className="relative mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-[#EF1751] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       >
         Learn more <FiArrowRight />
       </motion.span>
@@ -203,10 +203,10 @@ function StepDetails({ step, onGetStarted, onBookCall }) {
           onClick={onGetStarted}
           whileHover={{
             scale: 1.02,
-            boxShadow: "0 12px 28px -10px rgba(240,69,61,0.55)",
+            boxShadow: "0 12px 28px -10px rgba(239,23,81,0.55)",
           }}
           whileTap={{ scale: 0.97 }}
-          className="flex items-center justify-center gap-2 rounded-full bg-[#F0453D] px-6 py-3 text-sm font-semibold text-white"
+          className="flex items-center justify-center gap-2 rounded-full bg-[#EF1751] px-6 py-3 text-sm font-semibold text-white"
         >
           Get Started
           <FiArrowRight />
@@ -214,7 +214,7 @@ function StepDetails({ step, onGetStarted, onBookCall }) {
         <motion.button
           type="button"
           onClick={onBookCall}
-          whileHover={{ scale: 1.02, borderColor: "#F0453D", color: "#F0453D" }}
+          whileHover={{ scale: 1.02, borderColor: "#EF1751", color: "#EF1751" }}
           whileTap={{ scale: 0.97 }}
           className="flex items-center justify-center gap-2 rounded-full border border-black/10 px-6 py-3 text-sm font-semibold text-[#17171F] transition-colors"
         >
@@ -251,7 +251,7 @@ function GetStartedForm({ onDone }) {
             delay: 0.1,
           }}
         >
-          <FiCheckCircle className="mb-4 text-6xl text-[#F0453D]" />
+          <FiCheckCircle className="mb-4 text-6xl text-[#EF1751]" />
         </motion.div>
         <h4 className="text-lg font-bold text-[#17171F]">Request received!</h4>
         <p className="mt-1 text-sm text-gray-500">
@@ -276,7 +276,7 @@ function GetStartedForm({ onDone }) {
           required
           type="text"
           placeholder="Your TikTok Shop brand"
-          className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#F0453D]"
+          className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#EF1751]"
         />
       </label>
       <label className="flex flex-col gap-1.5 text-sm font-medium text-[#17171F]">
@@ -285,17 +285,17 @@ function GetStartedForm({ onDone }) {
           required
           type="email"
           placeholder="you@brand.com"
-          className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#F0453D]"
+          className="rounded-xl border border-black/10 px-3.5 py-2.5 text-sm outline-none focus:border-[#EF1751]"
         />
       </label>
       <motion.button
         type="submit"
         whileHover={{
           scale: 1.02,
-          boxShadow: "0 12px 28px -10px rgba(240,69,61,0.55)",
+          boxShadow: "0 12px 28px -10px rgba(239,23,81,0.55)",
         }}
         whileTap={{ scale: 0.97 }}
-        className="mt-2 flex items-center justify-center gap-2 rounded-full bg-[#F0453D] px-6 py-3 text-sm font-semibold text-white"
+        className="mt-2 flex items-center justify-center gap-2 rounded-full bg-[#EF1751] px-6 py-3 text-sm font-semibold text-white"
       >
         Send request
         <FiArrowRight />
@@ -333,7 +333,7 @@ function BookCallContent({ onDone }) {
             delay: 0.1,
           }}
         >
-          <FiCheckCircle className="mb-4 text-6xl text-[#F0453D]" />
+          <FiCheckCircle className="mb-4 text-6xl text-[#EF1751]" />
         </motion.div>
         <h4 className="text-lg font-bold text-[#17171F]">
           Call booked for {selectedSlot}
@@ -370,8 +370,8 @@ function BookCallContent({ onDone }) {
                 whileTap={{ scale: 0.96 }}
                 className={`rounded-full border px-3.5 py-2 text-xs font-semibold transition-colors ${
                   active
-                    ? "border-[#F0453D] bg-[#F0453D] text-white"
-                    : "border-black/10 text-[#4B4B57] hover:border-[#F0453D]/50"
+                    ? "border-[#EF1751] bg-[#EF1751] text-white"
+                    : "border-black/10 text-[#4B4B57] hover:border-[#EF1751]/50"
                 }`}
               >
                 {slot}
@@ -389,13 +389,13 @@ function BookCallContent({ onDone }) {
           selectedSlot
             ? {
                 scale: 1.02,
-                boxShadow: "0 12px 28px -10px rgba(240,69,61,0.55)",
+                boxShadow: "0 12px 28px -10px rgba(239,23,81,0.55)",
               }
             : {}
         }
         whileTap={selectedSlot ? { scale: 0.97 } : {}}
         className={`flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition-opacity ${
-          selectedSlot ? "bg-[#F0453D]" : "cursor-not-allowed bg-[#F0453D]/40"
+          selectedSlot ? "bg-[#EF1751]" : "cursor-not-allowed bg-[#EF1751]/40"
         }`}
       >
         Confirm call
@@ -451,7 +451,7 @@ function HowItWorks() {
       />
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-[#F0453D]/10 blur-3xl"
+        className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-[#EF1751]/10 blur-3xl"
         animate={
           shouldReduceMotion
             ? {}
@@ -476,10 +476,10 @@ function HowItWorks() {
             initial={{ opacity: 0, y: -12 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-[#F0453D]"
+            className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-[#EF1751]"
           >
             <motion.span
-              className="h-1.5 w-1.5 rounded-full bg-[#F0453D]"
+              className="h-1.5 w-1.5 rounded-full bg-[#EF1751]"
               animate={
                 shouldReduceMotion
                   ? {}
@@ -498,7 +498,7 @@ function HowItWorks() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-5 text-[2rem] font-extrabold leading-tight text-white sm:text-4xl"
+            className="mt-5 text-[1.5rem] font-bold leading-tight text-white sm:text-3xl lg:text-4xl"
           >
             How It Works
           </motion.h2>
