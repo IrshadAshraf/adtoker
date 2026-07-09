@@ -239,7 +239,7 @@ function Hero() {
             variants={lineContainer}
             initial="hidden"
             animate="visible"
-            className="text-[2rem] font-bold leading-[1.1] tracking-tight text-[#111118] sm:text-5xl lg:text-6xl"
+            className="text-[2rem] font-bold leading-[1.1] tracking-tight bg-gradient-to-r from-[#EF1751] via-[#ff5388] to-[#EF1751] bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-flow sm:text-5xl lg:text-6xl"
           >
             {HEADLINE_LINES.map((words) => (
               <motion.span
@@ -495,7 +495,7 @@ function Hero() {
           </div>
 
           {/* Connector icon with radar pulse - signature element */}
-          <div className="absolute left-0 top-[30%] -translate-x-1/2 -translate-y-1/2 z-10">
+          <div className="absolute left-0 top-[30%] -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:block">
             <div className="relative grid h-16 w-16 place-items-center">
               {[0, 1].map((i) => (
                 <motion.span

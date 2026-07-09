@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { HashLink } from "react-router-hash-link";
-import logo from "@/assets/Nav/image 11.png";
+import Logo from "./Logo";
 import {
   AnimatePresence,
   motion,
@@ -127,7 +127,7 @@ function Nav() {
             to="#hero"
             className="flex items-center gap-1 text-lg font-bold tracking-tight"
           >
-            <img src={logo} alt="none" className="h-12 mix-blend-multiply" />
+            <Logo className="h-12" />
           </HashLink>
 
           {/* Desktop links */}

@@ -90,7 +90,7 @@ function Blogs() {
                 delay: idx * 0.1,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="group relative"
+              className="group relative pb-12 lg:pb-0"
             >
               {/* 1. Main Image Container */}
               <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[2.5rem] bg-gray-100 shadow-lg">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
-import logo from "@/assets/Nav/image 11.png";
+import Logo from "./Logo";
 import {
   FiSend,
   FiTwitter,
@@ -57,7 +57,7 @@ function Footer() {
   const [drawerType, setDrawerType] = useState(null); // 'started' or 'consult'
 
   return (
-    <footer className="relative mt-40 bg-[#17171F] pt-20 pb-10 px-5 sm:px-10 rounded-t-[3rem] sm:rounded-t-[5rem]">
+    <footer className="relative mt-40 bg-[#17171F] pt-32 sm:pt-36 lg:pt-24 pb-10 px-5 sm:px-10 rounded-t-[3rem] sm:rounded-t-[5rem]">
       {/* 1. TOP RED CTA BOX (Floating & Offset) */}
       <motion.div
         initial={{ y: 50, opacity: 0 }}
@@ -96,7 +96,7 @@ function Footer() {
               className="inline-block mb-8"
             >
               <HashLink smooth to="#hero">
-                <img src={logo} alt="none" className="h-10 mix-blend-multiply" />
+                <Logo className="h-10" withBg={true} />
               </HashLink>
             </motion.div>
 

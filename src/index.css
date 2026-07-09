@@ -14,6 +14,7 @@
   --font-sans: "DM Sans", sans-serif;
   --animate-pulse-scale: pulse-scale 3s ease-in-out infinite;
   --animate-pulse-scale-inverse: pulse-scale-inverse 3s ease-in-out infinite;
+  --animate-gradient-flow: gradient-flow 6s ease infinite;
 
   @keyframes pulse-scale {
     0%,
@@ -36,6 +37,15 @@
     50% {
       transform: scale(1);
       rotate: 1deg;
+    }
+  }
+
+  @keyframes gradient-flow {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
     }
   }
 }
