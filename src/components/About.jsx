@@ -17,21 +17,31 @@ import {
 import { FiArrowUpRight } from "react-icons/fi";
 import { FaStar } from "react-icons/fa6";
 import Drawer from "./Drawer";
+import avatar1 from "@/assets/about/4bade173eb3c4cc93556978e64df46d7bd43514c.jpg";
+import avatar2 from "@/assets/about/38ba207a08e02736b82bf0dfb074e9677fb4c2e7.jpg";
+import avatar3 from "@/assets/about/3814f8a4415832f7550e1d09b13381ce20bb580f.jpg";
+import cAvatar1 from "@/assets/about/Social Image.png";
+import cAvatar2 from "@/assets/about/Social Image1.png";
+import cAvatar3 from "@/assets/about/Social Image2.png";
+import cAvatar4 from "@/assets/about/Social Image3.png";
+import image1 from "@/assets/about/image 3681.png";
+import image2 from "@/assets/about/image 3679.png";
 
 /* ------------------------------------------------------------------ */
 /*  Static content — swap in real copy / images whenever ready         */
 /* ------------------------------------------------------------------ */
 
 const CUSTOMER_AVATARS = [
-  { id: 1, name: "Amir K.", src: "https://i.pravatar.cc/150?img=12" },
-  { id: 2, name: "Priya S.", src: "https://i.pravatar.cc/150?img=47" },
-  { id: 3, name: "Leah M.", src: "https://i.pravatar.cc/150?img=32" },
+  { id: 1, name: "Amir K.", src: cAvatar1 },
+  { id: 2, name: "Priya S.", src: cAvatar2 },
+  { id: 3, name: "Leah M.", src: cAvatar3 },
+  { id: 3, name: "Anand P", src: cAvatar4 },
 ];
 
 const REVIEWER_AVATARS = [
-  { id: 1, name: "Daniyal R.", src: "https://i.pravatar.cc/150?img=68" },
-  { id: 2, name: "Sara T.", src: "https://i.pravatar.cc/150?img=5" },
-  { id: 3, name: "Musa H.", src: "https://i.pravatar.cc/150?img=59" },
+  { id: 1, name: "Amir K.", src: avatar1 },
+  { id: 2, name: "Priya S.", src: avatar2 },
+  { id: 3, name: "Leah M.", src: avatar3 },
 ];
 
 const PILLARS = [
@@ -211,7 +221,7 @@ export default function AboutSection() {
             transition={{ type: "spring", stiffness: 220, damping: 16 }}
           >
             <img
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=600&auto=format&fit=crop"
+              src={image1}
               alt="Two teammates reviewing TikTok Shop analytics together"
               className="h-full w-full object-cover"
             />
@@ -226,7 +236,7 @@ export default function AboutSection() {
             whileHover={shouldReduceMotion ? {} : { y: -10, rotate: 2 }}
           >
             <img
-              src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=700&auto=format&fit=crop"
+              src={image2}
               alt="Creator filming a live TikTok Shop unboxing"
               className="h-full w-full object-cover"
             />
